@@ -1,6 +1,6 @@
 # nodeServerClient
 
-This repo send a file read by the server to the client. It can also send a file read by the client to the server.
+This code uses pure nodeJS to send a file, read by the server, to the client. It can also send a file, read by the client ,to the server.
 
 To run this program you will need two terminal windows, one to run the server and one to run the client.
 
