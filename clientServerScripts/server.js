@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
       console.log('sending data to client');
       res.write(data); // send data
       
-      res.emit('close'); // force close event
+      res.emit('close'); // force close event, this is superfluous
 
       res.end('Goodbye from the server file.'); // end 
       

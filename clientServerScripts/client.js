@@ -7,9 +7,9 @@ const url = 'http://127.0.0.1:8080';
 
 var method = process.argv[2] || 'GET';
 
-if (method.toUpperCase() === 'GET'){
+if (method.toUpperCase() === 'GET'){ 
   // //////////////// GET REQUEST
-  http.get(url, res => {
+  http.get(url, res => { // rewrite this with a http.request
     console.log('written in the CLIENT file: Got response: ', res.statusCode, res.statusMessage);
 
     res.on('data', chunk => {
