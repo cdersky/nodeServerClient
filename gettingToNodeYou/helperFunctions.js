@@ -1,6 +1,7 @@
 'use strict'
+
+// returns the value printed after a specified flag
 module.exports.grabFlagValue = function(flag){
-  // returns the value printed after a specified flag
   var terminalItems = process.argv; // array of items
   var result;
   for(let i = 0; i < terminalItems.length-1; i++){
@@ -10,4 +11,10 @@ module.exports.grabFlagValue = function(flag){
     }
   }
   return result;
+}
+
+// ask questions in terminal
+module.exports.ask = function(idx){
+  var fortunes = [`things are looking up`, `you will go far`, `try again`];
+  process.stdout.write(fortunes[idx]);
 }

@@ -1,6 +1,6 @@
 'use strict'
 var fxn = require('./helperFunctions');
-
+console.log(fxn)
 //////////////////////////////////////////////////////////
 //                                reserved word: __dirname
 //////////////////////////////////////////////////////////
@@ -42,9 +42,35 @@ console.log(process.argv)
 /* 
 SUMMARY, the process.argv variable contains all the items typed in the terminal. If a the item is a script, the process.argv will store the file path.
 */
+// exercise/test to verify that we are grabbing flags correctly
+// var var1 = fxn.grabFlagValue('-a');
+// var var2 = fxn.grabFlagValue('-b');
+// if(var1 || var2){
+//   console.log(var1, var2)
+// }
 
-var var1 = fxn.grabFlagValue('-a');
-var var2 = fxn.grabFlagValue('-b');
-if(var1 || var2){
-  console.log(var1, var2)
-}
+
+/// 2. read from and write to the terminal
+/////// a. write a message to the terminal
+process.stdout.write(`\n\nhello terminal! i am writing to you from the js file\n\n\n\n`);
+/////// this prints all the items typed in the terminal
+/*
+
+
+hello terminal! i am writing to you from the js file
+
+
+
+*/
+/////// b. type `node intro.js 0` into the terminal to run the script on the following line
+fxn.ask(process.argv[process.argv.length - 1]);
+/////// this prints all the items typed in the terminal
+/*
+
+
+hello terminal! i am writing to you from the js file
+
+
+
+things are looking up%
+*/
